@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{   int largest;
+    int second_largest;
+    int number;
+    int counter;
+    printf("Enter the number: ");
+    scanf("%d", &number);
+    largest=number;
+    second_largest=number;
+    counter=1;
+    while(counter<10){
+        printf("Enter the number: ");
+        scanf("%d", &number);
+        if(number>largest){
+            second_largest=largest;
+            largest=number;
+        }
+        else if(number<largest){
+                if (number>second_largest){
+                    second_largest=number;
+                }
+        }
+
+        counter++;
+    }
+    printf("The largest number is the: %d\n", largest);
+    printf("The second largest number is the: %d\n", second_largest);
+
+
+
+    return 0;
+}
